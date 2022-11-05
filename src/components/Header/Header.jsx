@@ -1,14 +1,14 @@
 import '../../scss/app.scss';
-
+import pizzaLogo from './pizzaLogo.svg';
 const Header = () => {
   return (
     <div class="header">
       <div class="container">
         <div class="header__logo">
-          <img width="38" src="./img/pizza-logo.svg" alt="Pizza logo" />
+          <img width="38" src={pizzaLogo} alt="Pizza logo" />
           <div>
             <h1>React Pizza</h1>
-            <p>самая вкусная пицца во вселенной</p>
+            <p>найсмачніша піца в світі</p>
           </div>
         </div>
         <div class="header__cart">

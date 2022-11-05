@@ -3,11 +3,11 @@ const Categories = () => {
     <div class="categories">
       <ul>
         <li class="active">Все</li>
-        <li>Мясные</li>
-        <li>Вегетарианская</li>
+        <li>Мясні</li>
+        <li>Вегетаріанска</li>
         <li>Гриль</li>
-        <li>Острые</li>
-        <li>Закрытые</li>
+        <li>Гострі</li>
+        <li>Закриті</li>
       </ul>
     </div>
   );

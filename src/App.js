@@ -14,7 +14,7 @@ function App(props) {
             <Categories />
             <Sort />
           </div>
-          <h2 class="content__title">Все пиццы</h2>
+          <h2 class="content__title">Всі піцци</h2>
           <div class="content__items">
             <Pizza_Block
               title="Карбонара"
@@ -22,12 +22,12 @@ function App(props) {
               image="https://starwood.vn.ua/wp-content/uploads/2020/05/Karbonara.jpg"
             />
             <Pizza_Block
-              title="Гавайская"
+              title="Гавайська"
               price="187 грн"
               image="https://starwood.vn.ua/wp-content/uploads/2018/07/Gavajska.jpg"
             />
             <Pizza_Block
-              title="Салями"
+              title="Салямі"
               price="167 грн"
               image="https://starwood.vn.ua/wp-content/uploads/2018/06/Salyami.jpg"
             />
@@ -37,7 +37,7 @@ function App(props) {
               image="https://starwood.vn.ua/wp-content/uploads/2018/06/Margarita-1.jpg"
             />
             <Pizza_Block
-              title="4 сыра"
+              title="4 сира"
               price="237 грн"
               image="https://starwood.vn.ua/wp-content/uploads/2018/05/4sira.jpg"
             />

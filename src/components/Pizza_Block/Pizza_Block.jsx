@@ -1,4 +1,13 @@
+import React, { useState } from 'react';
+
 const Pizza_Block = (props) => {
+  
+  const [pizzaCount, pizzaSetCount] = useState(0);
+  
+  const addCount = () => {
+    pizzaSetCount(pizzaCount + 1)
+  }
+
   return (
     <div class="pizza-block">
       <img
@@ -9,8 +18,8 @@ const Pizza_Block = (props) => {
       <h4 class="pizza-block__title">{props.title}</h4>
       <div class="pizza-block__selector">
         <ul>
-          <li class="active">тонкое</li>
-          <li>традиционное</li>
+          <li class="active">тонке</li>
+          <li>традиційне</li>
         </ul>
         <ul>
           <li class="active">26 см.</li>
@@ -20,7 +29,7 @@ const Pizza_Block = (props) => {
       </div>
       <div class="pizza-block__bottom">
         <div class="pizza-block__price">{props.price}</div>
-        <div class="button button--outline button--add">
+        <div class="button button--outline button--add" onClick={addCount}>
           <svg
             width="12"
             height="12"
@@ -32,8 +41,8 @@ const Pizza_Block = (props) => {
               fill="white"
             />
           </svg>
-          <span>Добавить</span>
-          <i>2</i>
+          <span>Добавити</span>
+          <i>{pizzaCount}</i>
         </div>
       </div>
     </div>
