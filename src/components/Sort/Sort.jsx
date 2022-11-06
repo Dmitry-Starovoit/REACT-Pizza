@@ -1,7 +1,17 @@
+import React, {useState} from 'react';
+
+
 const Sort = () => {
+
+  const [activeSort, setActiveSort] = useState(0);
+
+  const addActive = (activeSort) =>{
+    setActiveSort(activeSort)
+  }
+
   return (
-    <div class="sort">
-      <div class="sort__label">
+    <div className="sort">
+      <div className="sort__label">
         <svg
           width="10"
           height="6"
@@ -16,11 +26,11 @@ const Sort = () => {
         <b>Сортувати по:</b>
         <span>популярності</span>
       </div>
-      <div class="sort__popup">
+      <div className="sort__popup">
         <ul>
-          <li class="active">популярності</li>
-          <li>ціні</li>
-          <li>алфавіту</li>
+          <li onClick={() => addActive(0)} className={activeSort === 0 ? 'active' : ''}>популярності</li>
+          <li onClick={() => addActive(1)} className={activeSort === 1 ? 'active' : ''}>ціні</li>
+          <li onClick={() => addActive(2)} className={activeSort === 2 ? 'active' : ''}>алфавіту</li>
         </ul>
       </div>
     </div>
