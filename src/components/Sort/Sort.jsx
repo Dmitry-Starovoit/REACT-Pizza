@@ -5,6 +5,8 @@ const Sort = () => {
 
   const [activeSort, setActiveSort] = useState(0);
 
+  const sort = ['популярності', 'ціні', 'алфавіту']
+
   const addActive = (activeSort) =>{
     setActiveSort(activeSort)
   }
@@ -28,9 +30,9 @@ const Sort = () => {
       </div>
       <div className="sort__popup">
         <ul>
-          <li onClick={() => addActive(0)} className={activeSort === 0 ? 'active' : ''}>популярності</li>
-          <li onClick={() => addActive(1)} className={activeSort === 1 ? 'active' : ''}>ціні</li>
-          <li onClick={() => addActive(2)} className={activeSort === 2 ? 'active' : ''}>алфавіту</li>
+          {sort.map((value, i) => 
+            <li onClick={() => addActive(i)} className={activeSort === i ? 'active' : ''}>{value}</li>
+          )}
         </ul>
       </div>
     </div>
