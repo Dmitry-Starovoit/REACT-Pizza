@@ -18,7 +18,7 @@ function App(props) {
           <h2 className="content__title">Всі піцци</h2>
           <div className="content__items">
             {pizzas.map((object) => (
-              <Pizza_Block {...object} />
+              <Pizza_Block key={object.id} {...object} />
             ))}
           </div>
         </div>

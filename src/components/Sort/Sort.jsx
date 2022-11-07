@@ -11,6 +11,13 @@ const Sort = () => {
     setActiveSort(activeSort)
   }
 
+  const onClickListItem = (i) => {
+    addActive(i);
+    setOpen(!open);
+  }
+
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="sort">
       <div className="sort__label">
@@ -26,15 +33,18 @@ const Sort = () => {
           />
         </svg>
         <b>Сортувати по:</b>
-        <span>популярності</span>
+        <span onClick={()=> setOpen(!open)}>{sort[activeSort]}</span>
       </div>
+      
+      {open &&(
       <div className="sort__popup">
         <ul>
           {sort.map((value, i) => 
-            <li onClick={() => addActive(i)} className={activeSort === i ? 'active' : ''}>{value}</li>
+            <li key={i} onClick={() => onClickListItem(i)} className={activeSort === i ? 'active' : ''}>{value}</li>
           )}
         </ul>
       </div>
+)}
     </div>
   );
 };
