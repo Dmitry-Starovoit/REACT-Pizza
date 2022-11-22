@@ -1,0 +1,43 @@
+.header{
+  text-align: center;
+}
+
+.button {
+  padding: 12px 0 14px;
+  width: 230px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.button {
+  background-color: #232323;
+}
+
+.button,
+.button span {
+  color: #fff;
+}
+
+.button {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #000;
+ 
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  border: 1px solid transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.text{
+  margin-top: 20px;
+}
+
+
