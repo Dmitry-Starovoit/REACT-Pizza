@@ -5,7 +5,6 @@ import Sort from '../components/Sort/Sort';
 import { useEffect, useState } from 'react';
 
 function Home() {
-
   const [items, setItems] = useState([]);
 
   const [isLoading, setLoading] = useState(true);
@@ -18,21 +17,23 @@ function Home() {
       .then((arr) => {
         setItems(arr);
       });
+    window.scroll(0, 0);
   }, []);
 
-    return(
-      <div className="container">
-          <div className="content__top">
-            <Categories />
-            <Sort />
-          </div>
-          <h2 className="content__title">Всі піцци</h2>
-          <div className="content__items">
-            {isLoading
-              ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
-              : items.map((object) => <Pizza_Block key={object.id} {...object} />)}
-          </div>
-        </div>
-      )}
+  return (
+    <div className="container">
+      <div className="content__top">
+        <Categories />
+        <Sort />
+      </div>
+      <h2 className="content__title">Всі піцци</h2>
+      <div className="content__items">
+        {isLoading
+          ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
+          : items.map((object) => <Pizza_Block key={object.id} {...object} />)}
+      </div>
+    </div>
+  );
+}
 
 export default Home;

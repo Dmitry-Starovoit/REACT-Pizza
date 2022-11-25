@@ -4,6 +4,17 @@
   border-bottom: 1px solid $gray-line;
   padding: 40px 0;
 
+  @media (max-width: 560px) {
+      p{
+        display: none;
+      }
+    }
+        @media (max-width: 415px) {
+          span {
+            display: none;
+          }
+        }
+
   .container {
     display: flex;
     align-items: center;
